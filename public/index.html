@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindVault Personal</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <img src="/icon.svg" alt="" width="28" height="28">
+      <div>
+        <h1>MindVault Personal</h1>
+        <p class="tag">Plans your day from memory you can inspect, with reasoning you approve.</p>
+      </div>
+    </div>
+    <div class="status" id="status"></div>
+  </header>
+  <div id="banner"></div>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="today" aria-selected="true">Today</button>
+    <button role="tab" data-tab="memory">Memory</button>
+    <button role="tab" data-tab="sources">Sources</button>
+    <button role="tab" data-tab="activity">Activity</button>
+  </nav>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <main id="app"><p class="muted">Loading…</p></main>
+  <footer class="foot">
+    <span>MindVault is a planning aid, not a medical or crisis service.</span>
+    <button class="link" id="reset">Reset demo data</button>
+  </footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

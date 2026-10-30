@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: mindvault-personal
+    runtime: node
+    plan: free
+    buildCommand: "true"
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: MINDVAULT_PROFILE
+        value: hosted
+      - key: MINDVAULT_TIMEZONE
+        value: Asia/Kolkata
+      - key: MINDVAULT_DATA_DIR
+        value: /tmp/mindvault
+      - key: NEBIUS_BASE_URL
+        value: https://api.tokenfactory.nebius.com/v1/
+      - key: NEBIUS_API_KEY
+        sync: false
+      - key: NEBIUS_MODEL_ID
+        sync: false

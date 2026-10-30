@@ -1,0 +1,14 @@
+{
+  "name": "mindvault-personal",
+  "version": "0.1.0",
+  "description": "Consent-first personal planner with inspectable memory, using NVIDIA Nemotron through Nebius Token Factory.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js",
+    "demo": "MINDVAULT_PROFILE=hosted MINDVAULT_INSECURE_COOKIE=1 node server.js",
+    "preflight": "node scripts/preflight.js",
+    "test": "node --test test/*.test.js"
+  }
+}
